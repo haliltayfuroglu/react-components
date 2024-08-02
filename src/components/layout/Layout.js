@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 const Layout = ({ children }) => {
   const layoutVersion = "Layout Version 2.0";
