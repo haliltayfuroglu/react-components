@@ -1,20 +1,29 @@
 {
-  "name": "todoapp",
-  "version": "0.1.0",
-  "private": true,
+  "name": "designing-components-in-react-pluralsight-course",
+  "author": "Peter Kellner",
+  "version": "1.0.0",
+  "description": "Designing Components in React Course Demo Files",
+  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
+  "keywords": [
+    "react",
+    "JavaScript",
+    "Pluralsight"
+  ],
+  "license": "MIT",
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.5"
+    "axios": "^0.27.2",
+    "next": "13.4.19",
+    "react": "^18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.19"
   }
 }
