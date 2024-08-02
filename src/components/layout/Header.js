@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../App";
 
-const Header = ({ darkTheme, toggleTheme }) => {
+ 
+
+
+const Header = ({ layoutVersion }) => {
+  const {darkTheme, toggleTheme} = useContext(ThemeContext);
+  
   return (
     <header>
       <h2>To-do List</h2>
@@ -23,6 +29,7 @@ const Header = ({ darkTheme, toggleTheme }) => {
           <i className="fas fa-sun"></i>
           <span className="ball"></span>
         </label>
+        <span>{layoutVersion}</span>
       </span>
     </header>
   );
