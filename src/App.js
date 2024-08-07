@@ -3,7 +3,6 @@ import Layout from "./components/layout/Layout";
 import ToDoListWithToolbar from "./components/todo/ToDoListWithToolbar";
 import ToDoManager from "./components/todo/ToDoManager";
 import { TodosDataProvider } from "./contexts/ToDosDataContext";
-import ThemeProvider from "./contexts/ThemeContext";
 
 
 const App = () => {
@@ -13,7 +12,6 @@ const App = () => {
 
   return (
     <TodosDataProvider>
-      <ThemeProvider>
         <Layout >
           <ToDoListWithToolbar
             displayStatus={displayStatus} setDisplayStatus={setDisplayStatus}
@@ -27,7 +25,6 @@ const App = () => {
             />
           </ToDoListWithToolbar>
         </Layout>
-      </ThemeProvider>
     </TodosDataProvider>
   );
 };
