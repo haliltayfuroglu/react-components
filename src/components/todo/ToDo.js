@@ -1,4 +1,6 @@
-const ToDo = ({
+import ErrorBoundary from "../../common/ErrorBoundary";
+
+const Inner = ({
   todoItem,
   handleToggleCompleted,
   handleDelete,
@@ -65,5 +67,22 @@ const ToDo = ({
     </div>
   );
 };
+
+const ToDoErrorBoundary = (props) => {
+  return (
+    <div className="single-task text-bg-danger">
+      <b>ERROR PROCESSING ToDo: {JSON.stringify(props)}</b>
+    </div>
+  )
+}
+
+const ToDo = (props) => {
+
+  return (
+    <ErrorBoundary errorUI={<ToDoErrorBoundary {...props} />}>
+      <Inner {...props} />
+    </ErrorBoundary>
+  )
+}
 
 export default ToDo;
